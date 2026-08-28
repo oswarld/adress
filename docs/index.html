@@ -22,10 +22,6 @@
     * { box-sizing: border-box; }
     body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.62; }
     a { color: var(--teal); font-weight: 700; }
-    .top-banner { display: block; width: 100%; padding: 13px 20px; border-bottom: 3px solid #d6a23e; color: white; background: #0b302c; text-align: center; text-decoration: none; font-size: 14px; font-weight: 800; letter-spacing: .01em; }
-    .top-banner:hover { background: #134d47; }
-    .top-banner:focus-visible { outline: 3px solid #f3c86d; outline-offset: -5px; }
-    .top-banner span { color: #f3c86d; }
     main { width: calc(100% - 32px); max-width: 1080px; margin: 0 auto; padding: 28px 0 64px; }
     .hero { padding: clamp(32px, 7vw, 76px); border-radius: 28px; color: white; background: #123e39; }
     .eyebrow { margin: 0 0 20px; color: #b9ddd5; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
@@ -35,6 +31,14 @@
     h2 { margin: 0 0 8px; font-size: clamp(25px, 4vw, 38px); letter-spacing: -.03em; }
     .section-copy { max-width: 800px; margin: 0 0 24px; color: var(--muted); }
     .plain-summary { max-width: 900px; margin: 0; font-size: clamp(16px, 2vw, 19px); }
+    .project-banner { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; margin-top: 28px; padding: clamp(26px, 4vw, 38px); border-radius: 24px; color: white; background: linear-gradient(125deg, #0b302c 0%, #0f766e 100%); text-decoration: none; box-shadow: 0 14px 32px rgba(18, 62, 57, .16); }
+    .project-banner:hover { background: linear-gradient(125deg, #123e39 0%, #12857c 100%); }
+    .project-banner:focus-visible { outline: 4px solid #d6a23e; outline-offset: 4px; }
+    .project-banner-copy small { display: block; margin-bottom: 8px; color: #b9ddd5; font-size: 13px; font-weight: 800; letter-spacing: .08em; }
+    .project-banner-copy strong { display: block; font-size: clamp(24px, 3.5vw, 36px); line-height: 1.25; letter-spacing: -.03em; }
+    .project-banner-copy span { display: block; max-width: 690px; margin-top: 10px; color: #d7e9e5; font-size: 15px; font-weight: 500; }
+    .project-banner-action { display: inline-flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 999px; color: #17302d; background: #f3c86d; white-space: nowrap; font-size: 15px; font-weight: 900; }
+    .project-banner-action span { font-size: 20px; line-height: 1; }
     .scenes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
     .scene { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: #fbfdfc; }
     .scene-number { display: block; margin-bottom: 12px; color: var(--teal); font-size: 13px; font-weight: 800; letter-spacing: .08em; }
@@ -64,6 +68,8 @@
     footer { display: flex; justify-content: space-between; gap: 18px; padding: 28px 4px 0; color: var(--muted); font-size: 13px; }
     @media (max-width: 820px) {
       .metrics, .contract { grid-template-columns: 1fr 1fr; }
+      .project-banner { grid-template-columns: 1fr; gap: 20px; }
+      .project-banner-action { justify-self: start; }
       .scenes { grid-template-columns: 1fr; }
       .modes { grid-template-columns: 1fr; }
     }
@@ -77,9 +83,6 @@
   </style>
 </head>
 <body>
-  <a class="top-banner" href="https://inlevel9.com/adress" target="_blank" rel="noopener noreferrer" aria-label="INLEVEL9 주소키 프로젝트 페이지 새 창에서 열기">
-    INLEVEL9에서 주소키 프로젝트 보기 <span aria-hidden="true">→</span>
-  </a>
   <main>
     <header class="hero">
       <p class="eyebrow">Juso Key · 주소키</p>
@@ -91,6 +94,15 @@
       <h2 id="summary-title">주소키가 하는 일</h2>
       <p class="plain-summary">주소키는 기관마다 제각각 적혀 있는 주소와 장소 정보를 하나의 공식 기준으로 확인하고 연결해 주는 서비스입니다. 새로운 번호를 만드는 것이 아니라 건물관리번호 등 이미 정부가 관리하는 공식 번호를 활용합니다. 주소가 바뀐 경우에는 변경 이력을 찾아 기존 자료를 자동으로 정리하고, 확인이 어려운 주소는 임의로 판단하지 않고 담당자가 검토하도록 구분합니다. AI도 장소를 추측해서 답하는 대신 공식 주소정보를 먼저 확인한 뒤, 근거가 있는 내용만 안내하게 됩니다. 사업체·관광지·의료시설 데이터를 대상으로 8주간 시범 운영하여 정확도와 오류 발생 여부, 담당자의 업무시간 절감 효과를 확인한 후 확대 여부를 결정합니다.</p>
     </section>
+
+    <a class="project-banner" href="https://inlevel9.com/adress" target="_blank" rel="noopener noreferrer" aria-label="INLEVEL9 주소키 프로젝트 페이지 새 창에서 열기">
+      <span class="project-banner-copy">
+        <small>INLEVEL9 · JUSO KEY PROJECT</small>
+        <strong>주소키 프로젝트 전체 보기</strong>
+        <span>제안의 배경부터 실제 구현과 활용 방법까지 INLEVEL9 프로젝트 페이지에서 확인할 수 있습니다.</span>
+      </span>
+      <span class="project-banner-action">INLEVEL9에서 열기 <span aria-hidden="true">→</span></span>
+    </a>
 
     <section aria-labelledby="scenes-title">
       <h2 id="scenes-title">국민이 겪는 세 장면</h2>
