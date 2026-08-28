@@ -22,6 +22,10 @@
     * { box-sizing: border-box; }
     body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.62; }
     a { color: var(--teal); font-weight: 700; }
+    .top-banner { display: block; width: 100%; padding: 13px 20px; border-bottom: 3px solid #d6a23e; color: white; background: #0b302c; text-align: center; text-decoration: none; font-size: 14px; font-weight: 800; letter-spacing: .01em; }
+    .top-banner:hover { background: #134d47; }
+    .top-banner:focus-visible { outline: 3px solid #f3c86d; outline-offset: -5px; }
+    .top-banner span { color: #f3c86d; }
     main { width: calc(100% - 32px); max-width: 1080px; margin: 0 auto; padding: 28px 0 64px; }
     .hero { padding: clamp(32px, 7vw, 76px); border-radius: 28px; color: white; background: #123e39; }
     .eyebrow { margin: 0 0 20px; color: #b9ddd5; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
@@ -73,6 +77,9 @@
   </style>
 </head>
 <body>
+  <a class="top-banner" href="https://inlevel9.com/adress" target="_blank" rel="noopener noreferrer" aria-label="INLEVEL9 주소키 프로젝트 페이지 새 창에서 열기">
+    INLEVEL9에서 주소키 프로젝트 보기 <span aria-hidden="true">→</span>
+  </a>
   <main>
     <header class="hero">
       <p class="eyebrow">Juso Key · 주소키</p>
