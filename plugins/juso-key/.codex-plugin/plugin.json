@@ -1,0 +1,32 @@
+{
+  "name": "juso-key",
+  "version": "0.2.0",
+  "description": "Verify Korean addresses with AI-safe evidence from the Juso API or a local full-release index.",
+  "author": {
+    "name": "oswarld",
+    "url": "https://github.com/oswarld"
+  },
+  "homepage": "https://github.com/oswarld/adress#readme",
+  "repository": "https://github.com/oswarld/adress",
+  "license": "MIT",
+  "keywords": ["korean-address", "postal-code", "english-address", "juso", "mcp"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Juso Key",
+    "shortDescription": "Official Korean addresses without ad-filled sites.",
+    "longDescription": "Finds official road-name and land-lot addresses, postal codes, English addresses, and building-level identifiers through the Juso search API or a local full-release index. Ambiguous results remain explicitly non-assertable so AI clients do not invent address data.",
+    "developerName": "oswarld",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://github.com/oswarld/adress",
+    "privacyPolicyURL": "https://github.com/oswarld/adress/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/oswarld/adress/blob/main/TERMS.md",
+    "brandColor": "#0F766E",
+    "defaultPrompt": [
+      "Find the official address, postal code, and English address for this Korean address.",
+      "Check whether these two Korean address spellings refer to the same building.",
+      "Verify this Korean address with official evidence."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "juso-key": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/bin/juso-key-mcp",
+      "args": []
+    }
+  }
+}

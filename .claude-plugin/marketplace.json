@@ -1,0 +1,15 @@
+{
+  "name": "juso-key-plugins",
+  "owner": {
+    "name": "oswarld"
+  },
+  "description": "Official Korean addresses, postal codes, and English addresses for AI clients.",
+  "plugins": [
+    {
+      "name": "juso-key",
+      "source": "./plugins/juso-key",
+      "description": "Verify Korean addresses from the Juso API or a local full-release index without AI guessing.",
+      "version": "0.2.0"
+    }
+  ]
+}

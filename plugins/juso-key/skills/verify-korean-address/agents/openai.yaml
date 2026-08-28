@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Korean Address"
+  short_description: "Find official Korean, postal, and English addresses"
+  default_prompt: "Use $verify-korean-address to find and verify this Korean address with official evidence."

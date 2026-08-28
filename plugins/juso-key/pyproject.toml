@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "juso-key"
+version = "0.2.0"
+description = "AI-safe Korean address verification through the Juso API or a local full-release index"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "oswarld" }
+]
+keywords = ["MCP", "Korean address", "postal code", "English address", "Juso"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+  "mcp>=2.0.0,<3",
+]
+
+[project.urls]
+Homepage = "https://github.com/oswarld/adress"
+Repository = "https://github.com/oswarld/adress"
+Issues = "https://github.com/oswarld/adress/issues"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3,<10",
+  "ruff>=0.12,<1",
+]
+
+[project.scripts]
+juso-key = "juso_key.cli:main"
+juso-key-mcp = "juso_key.server:main"
+juso-key-http = "juso_key.server:main_http"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/juso_key"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

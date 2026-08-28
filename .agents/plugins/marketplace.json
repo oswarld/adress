@@ -1,0 +1,20 @@
+{
+  "name": "juso-key-plugins",
+  "interface": {
+    "displayName": "Juso Key Plugins"
+  },
+  "plugins": [
+    {
+      "name": "juso-key",
+      "source": {
+        "source": "local",
+        "path": "./plugins/juso-key"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "juso-key",
+  "description": "Verify Korean addresses with AI-safe evidence from the Juso API or a local full-release index.",
+  "version": "0.2.0",
+  "author": {
+    "name": "oswarld",
+    "url": "https://github.com/oswarld"
+  },
+  "homepage": "https://github.com/oswarld/adress#readme",
+  "repository": "https://github.com/oswarld/adress",
+  "license": "MIT",
+  "keywords": ["korean-address", "postal-code", "english-address", "juso", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
